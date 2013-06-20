@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highstock Example</title>
+<!--		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/highstock.js"></script>
+		<script src="js/exporting.js"></script>
+		<script src="js/chart.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				chartList = new Array('NP: Petrol', 'IN: Petrol');
+				prepareChart(chartList);
+			});
+		</script>
+	</head>
+	<body>
+
+<div id="container" style="height: 500px; min-width: 600px"></div>
+<div>
+	<input type="checkbox" id="option0">np petrol
+	<input type="checkbox" id="option1">in petrol
+	<input type="checkbox" id="option2">np diesel
+	<input type="checkbox" id="option3">in diesel
+	<input type="checkbox" id="option4">np kerosene
+	<input type="checkbox" id="option5">in kerosene
+	<input type="button" value="show charts" onclick="displayChart()">
+</div>
+
+</body>
+</html>
+
