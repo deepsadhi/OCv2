@@ -1,0 +1,29 @@
+body{
+	background:#f5f5f5;
+	font-family:Helvetica, Arial;
+	color:#222222;
+}
+
+#header{
+	height:100px;
+	background:#fff;
+	overflow:hidden;
+}
+
+#logo{
+	position:relative;
+	top:20px;
+	margin-left:10px;
+	float:left;
+}
+
+#logo img{
+	height:70px;
+}
+
+.wrapper{
+	margin:0 auto;
+	width:960px;
+	position:relative;
+	max-width:100%;
+}

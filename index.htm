@@ -4,7 +4,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Highstock Example</title>
 <!--		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.min.js"></script>
 		<script src="js/highstock.js"></script>
 		<script src="js/exporting.js"></script>
 		<script src="js/chart.js"></script>
@@ -15,10 +18,14 @@
 			});
 		</script>
 	</head>
-	<body>
-
-<div id="container" style="height: 500px; min-width: 600px"></div>
-<div>
+<body>
+<header id="header">
+	<div class="wrapper">
+	<div id="logo"><img src="images/logo.png"></div>
+	</div>
+</header>
+<!-- <div id="container" style="height: 500px; min-width: 600px background:transparent !important;"></div> -->
+<!-- <div>
 	<input type="checkbox" id="option0">np petrol
 	<input type="checkbox" id="option1">in petrol
 	<input type="checkbox" id="option2">np diesel
@@ -38,9 +45,7 @@
 	<a href="csv.php?getData=in_kerosene" target="_blank">Kerosene</a>
 	<a href="csv.php?getData=in_diesel" target="_blank">Diesel</a>
 	<a href="csv.php?getData=in_petrol" target="_blank">Petrol</a>
-</div>
-
-
+</div> -->
 </body>
 </html>
 
