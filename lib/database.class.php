@@ -166,6 +166,3 @@ class Database
 	}
 
 }
-
-$database = new Database();
-$db = &$database;
