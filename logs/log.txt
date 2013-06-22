@@ -1,1 +1,9 @@
 2013-06-15 17:31:12 | 127.0.0.1: Hacking attempt?
+2013-06-20 11:05:47 | Database: Could not select database => Access denied for user ''@'localhost' to database 'oil_price'
+2013-06-20 11:05:47 | Database: Could not select database => Access denied for user ''@'localhost' to database 'oil_price'
+2013-06-20 11:05:48 | Query/Error: SHOW TABLES FROM oil_price LIKE "in_petrol" / Access denied for user ''@'localhost' to database 'oil_price'
+2013-06-20 11:05:48 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_petrol" / Access denied for user ''@'localhost' to database 'oil_price'
+2013-06-20 11:05:48 | ::1: Hacking attempt?
+2013-06-20 11:05:48 | ::1: Hacking attempt?
+2013-06-20 11:06:29 | ::1: Hacking attempt?
+2013-06-20 11:07:17 | ::1: Hacking attempt?
