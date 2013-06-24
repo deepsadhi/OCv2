@@ -1,5 +1,5 @@
 body{
-	background:#f5f5f5;
+	background:#fcfcfc;
 	font-family:'Gudea', Arial;
 	color:#333;
 }
@@ -18,11 +18,12 @@ a, a:link, a:visited{
 /*Header Styles */
 #header{
 	height:100px;
-	background:#f0f0f0;
+	background:#f5f5f5;
 	border-bottom:1px solid #cfcfcf;
 	position:fixed;
 	max-width:100%;
 	width:100%;
+	z-index:100;
 }
 
 #header:before{
@@ -62,6 +63,7 @@ a, a:link, a:visited{
 		text-transform:none;
 	}
 
+/*Navigation Styles */
 #navigation{
 	float:right;
 	line-height:99px;
@@ -78,6 +80,7 @@ li{
 
 li:hover{
 	background:#ffad40;
+	background:#B5C7DC;
 	transition:background .3s;
 }
 
@@ -93,7 +96,82 @@ li:hover:after{
 	left:50%;
 	top:100%;
 	margin-left:-10px;
-	border-top:10px solid #ffad40;
+	border-top:10px solid #B5C7DC;
 	border-left:10px solid transparent;
 	border-right:10px solid transparent;
+}
+
+/*Main Body */
+#main-content{
+	position:relative;
+	top:100px;
+	max-width:100%;
+	overflow:hidden;
+	background:url(../images/bg.png) no-repeat fixed bottom 20px left 20px;
+}
+
+#main-content .wrapper{
+	overflow:hidden;
+	padding:10px;
+}
+
+#container{
+	position:relative;
+	background:#fff;
+	border:1px solid #cfcfcf;
+	float:left;
+	width:700px;
+	max-width:100%;
+	margin:0 10px 10px 0;
+	box-shadow:1px 1px 0px #ccc;
+}
+
+#controls{
+	width:220px;
+	background:#fff;
+	max-width:100%;
+	float:left;
+	padding:10px;
+	position:relative;
+	margin:0 10px 10px 0;
+	border:1px solid #cfcfcf;
+	box-shadow:1px 1px 0px #ccc;
+}
+
+input[type="checkbox"] {
+    display:none;
+	*display:inline-block;
+}
+
+input[type="checkbox"] + label {
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:16px;
+    height:16px;
+	margin:7px 10px;
+    vertical-align:middle;
+    background:url(../images/unchecked.png)no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checked.png) no-repeat;
+}
+
+input[type="button"]{
+	border:0;
+	border-bottom:4px solid #ccc;
+	padding:7px;
+	margin:10px;
+	color:#333;
+	height:40px;
+}
+
+input[type="button"]:active{
+	border-bottom:2px solid #ccc;
+}
+
+#main-content .wrapper{
 }

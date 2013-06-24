@@ -3,12 +3,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Highstock Example</title>
-<!--		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-		<!--[if IE]>
+	<!-- [if IE]>
 		<script type="text/javascript" src="js/modernizr.min.js"></script>
 		<![endif] -->
 		<script src="js/highstock.js"></script>
@@ -25,8 +25,13 @@
 <header id="header">
 	<div class="wrapper">
 		<div id="logo"><img src="images/logo.png" alt="Oil Price Comparison"></div>
-		<div id="title">oil price Comparison<div id="tagline">Comparison of oil price of Nepal with India.</div></div>
-		<nav id="navigation">
+		<div id="title">
+			<hgroup>
+				<h1>oil price Comparison</h1>
+				<h2 id="tagline">Comparison of oil price of Nepal with India.</h2>
+			</hgroup>
+		</div>
+		<nav id="navigation" role="navigation">
 			<ul>
 				<li><a href="#">Home</a><li>
 				<li><a href="#">About</a><li>
@@ -36,17 +41,34 @@
 		</nav>
 	</div>
 </header>
-<!-- <div id="container" style="height: 500px; min-width: 600px background:transparent !important;"></div> -->
-<!-- <div>
-	<input type="checkbox" id="option0">np petrol
-	<input type="checkbox" id="option1">in petrol
-	<input type="checkbox" id="option2">np diesel
-	<input type="checkbox" id="option3">in diesel
-	<input type="checkbox" id="option4">np kerosene
-	<input type="checkbox" id="option5">in kerosene
-	<input type="button" value="show charts" onclick="displayChart()">
-</div>
+<div id="main-content">
+<div class="wrapper">
+<div id="container" style=""></div>
+<div id="controls">
+	<input type="checkbox" id="option0" name="np-petrol">
+		<label for="option0"><span></span>np petrol</label>
+	<p>
+	<input type="checkbox" id="option1" name="in-petrol">
+		<label for="option1"><span></span>in petrol</label>
+	<p>
+	<input type="checkbox" id="option2" name="np-diesel">
+		<label for="option2"><span></span>np diesel</label>
+	
+	<p>
+	<input type="checkbox" id="option3" name="in-diesel">
+		<label for="option3"><span></span>in diesel</label>
+		
+	<p>
+	<input type="checkbox" id="option4" name="np-kerosene">
+		<label for="option4"><span></span>np kerosene</label>
+	
+	<p>
+	<input type="checkbox" id="option5" name="in-kerosene">
+		<label for="option5"><span></span>in kerosene</label>
 
+	<p>
+	<input type="button" value="Show Charts" onclick="displayChart()">
+</div>
 <div>
 	<h2>Datasets</h2>
 	<b>Nepal</b>
@@ -57,7 +79,8 @@
 	<a href="csv.php?getData=in_kerosene" target="_blank">Kerosene</a>
 	<a href="csv.php?getData=in_diesel" target="_blank">Diesel</a>
 	<a href="csv.php?getData=in_petrol" target="_blank">Petrol</a>
-</div> -->
+</div>
+</div>
 </body>
 </html>
 
