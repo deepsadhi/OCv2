@@ -44,10 +44,10 @@ function prepareChart(chartList){
 
 			legend: {
 				enabled: true,
-				align: 'right',
-				layout: 'vertical',
-				verticalAlign: 'top',
-				y: 100,
+				//align: 'right',
+				//layout: 'horizontal',
+				verticalAlign: 'bottom',
+				//y: 100,
 				borderWidth: 0,
 			},
 			
