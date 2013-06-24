@@ -2,7 +2,7 @@
 
 /**
  * databases constants
- * define mysql hostname, username, password and table name here
+ * define mysql hostname, username, password and database name here
  */
 
 defined('DB_HOST') ? null : define('DB_HOST', 'localhost');
