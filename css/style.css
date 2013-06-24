@@ -144,6 +144,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
+    cursor: hand;
+	cursor: pointer;
 }
 
 input[type="checkbox"] + label span {
@@ -153,7 +155,6 @@ input[type="checkbox"] + label span {
 	margin:7px 10px;
     vertical-align:middle;
     background:url(../images/unchecked.png)no-repeat;
-    cursor:pointer;
 }
 
 input[type="checkbox"]:checked + label span {
