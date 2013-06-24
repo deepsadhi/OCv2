@@ -7,3 +7,9 @@
 2013-06-20 11:05:48 | ::1: Hacking attempt?
 2013-06-20 11:06:29 | ::1: Hacking attempt?
 2013-06-20 11:07:17 | ::1: Hacking attempt?
+2013-06-24 07:55:44 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: YES)
+2013-06-24 07:55:44 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: YES)
+2013-06-24 07:55:44 | Query/Error: SHOW TABLES FROM oil_price LIKE "in_petrol" / 
+2013-06-24 07:55:44 | ::1: Hacking attempt?
+2013-06-24 07:55:44 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_petrol" / 
+2013-06-24 07:55:44 | ::1: Hacking attempt?
