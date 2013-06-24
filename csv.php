@@ -11,6 +11,8 @@ if(isset($_GET['getData'])){
 	$purifier = new HTMLPurifier();
 	$tblName = $purifier->purify($_GET['getData']);
 
+	$database = new Database();
+
 	if($database->tableExists($tblName)){
 		# extract data from table
 		$sql = "SELECT date, price FROM {$tblName} ORDER BY date ASC";
