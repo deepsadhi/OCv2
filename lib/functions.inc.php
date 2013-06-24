@@ -4,7 +4,6 @@ function class_autoloader($class){
 	if(file_exists(LIB_PATH.DS.strtolower($class).'.class.php')){
 		require_once(LIB_PATH.DS.strtolower($class).'.class.php');
 	}else{
-		echo "was here";
 		$msg = 'lib/'.strtolower($class). '.class.php missing';
 		Log::log_action('Class', $msg);
 	}
