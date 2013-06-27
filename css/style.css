@@ -26,13 +26,6 @@ a, a:link, a:visited{
 	z-index:100;
 }
 
-#header:before{
-	height:10px;
-	width:960px;
-	content:' ';
-	box-shadow:0 50px 100px #000;
-}
-
 #logo{
 	position:relative;
 	top:20px;
@@ -70,29 +63,37 @@ a, a:link, a:visited{
 	text-transform:uppercase;
 }
 
-li{
+#header li{
 	margin:0 5px;
-	padding:0 10px;
 	float:left;
 	transition:background .3s;
 	position:relative;
 }
 
-li:hover{
+#header li:hover{
 	background:#ffad40;
 	background:#B5C7DC;
 	transition:background .3s;
 }
 
-li:hover a{
+#header li > a{
+	padding:40px 10px;
+}
+
+#header li:hover a{
 	color:#fff;
 }
 
-li:hover:after{
+#header .active{
+	position:relative;
+	height:100px;
+	background:#B5C7DC;
+}
+
+#header .active:after{
 	content:' ';
 	position:absolute;
 	width:0;
-	bottom:0;
 	left:50%;
 	top:100%;
 	margin-left:-10px;
@@ -106,12 +107,10 @@ li:hover:after{
 	position:relative;
 	top:100px;
 	max-width:100%;
-	overflow:hidden;
 	background:url(../images/bg.png) no-repeat fixed bottom 20px left 20px;
 }
 
 #main-content .wrapper{
-	overflow:hidden;
 	padding:10px;
 }
 
@@ -123,7 +122,6 @@ li:hover:after{
 	width:700px;
 	max-width:100%;
 	margin:0 10px 10px 0;
-	box-shadow:1px 1px 0px #ccc;
 }
 
 #controls{
@@ -135,7 +133,6 @@ li:hover:after{
 	position:relative;
 	margin:0 10px 10px 0;
 	border:1px solid #cfcfcf;
-	box-shadow:1px 1px 0px #ccc;
 }
 
 input[type="checkbox"] {
@@ -174,5 +171,36 @@ input[type="button"]:active{
 	border-bottom:2px solid #ccc;
 }
 
-#main-content .wrapper{
+h2.header:before{
+	position:absolute;
+	border-left:5px solid #B5C7DC;
+	margin:-10px 0 0 -20px;
+	padding:0;
+	content:' ';
+	height:100%;
+}
+
+h2.header{
+	background:#f5f5f5;
+	font-size:18px;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding:10px;
+	margin:10px 0;
+	position:relative;
+	box-shadow:1px 1px 3px #ccc;
+}
+
+#data-sets-body{
+	margin:30px;
+}
+
+
+li > ol{
+	margin-left:20px;
+}
+
+ol > .link{
+	display:inline-block;
+	margin:10px 10px 10px 10px;
 }
