@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Oil Price Comparison</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -19,6 +20,25 @@
 				chartList = new Array('NP: Petrol', 'IN: Petrol');
 				prepareChart(chartList);
 			});
+			
+			$(document).ready(function(){
+				var link_select = $('#navigation li a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
+				var prev_class = link_select.parent('li');	//Sets the current class as previous class for the next click event
+				$(link_select).click(function(event){
+					event.preventDefault();	//Prevents the click event to trigger
+					var get_href = $(this).attr('href');	//Get the value of 'href' attribute
+					var para = $(get_href);
+					prev_class.removeClass('active');
+					$(this).parent('li').addClass('active');
+					prev_class = $(this).parent('li');
+					if(get_href != '#'){
+						$('html,body').animate({scrollTop: para.position().top}, 800);
+					}
+					else{
+						$('html,body').animate({scrollTop: 0}, 800);
+					}
+				});
+			});
 		</script>
 	</head>
 <body>
@@ -34,7 +54,7 @@
 		<nav id="navigation" role="navigation">
 			<ul>
 				<li><a href="#">Home</a><li>
-				<li><a href="#">About</a><li>
+				<li><a href="#datasets">Data Sets</a><li>
 				<li><a href="#">Contributers</a><li>
 				<li><a href="#">Data Sets</a><li>
 			</ul>
@@ -43,44 +63,55 @@
 </header>
 <div id="main-content">
 <div class="wrapper">
-<div id="container" style=""></div>
-<div id="controls">
-	<input type="checkbox" id="option0" name="np-petrol">
-		<label for="option0"><span></span>np petrol</label>
-	<p>
-	<input type="checkbox" id="option1" name="in-petrol">
-		<label for="option1"><span></span>in petrol</label>
-	<p>
-	<input type="checkbox" id="option2" name="np-diesel">
-		<label for="option2"><span></span>np diesel</label>
-	
-	<p>
-	<input type="checkbox" id="option3" name="in-diesel">
-		<label for="option3"><span></span>in diesel</label>
+<!--Highchart inside "container" div -->
+	<div id="container" style=""></div>
+<!--Highchart ends -->
+	<div id="controls">
+		<input type="checkbox" id="option0" name="np-petrol">
+			<label for="option0"><span></span>np petrol</label>
+		<p>
+		<input type="checkbox" id="option1" name="in-petrol">
+			<label for="option1"><span></span>in petrol</label>
+		<p>
+		<input type="checkbox" id="option2" name="np-diesel">
+			<label for="option2"><span></span>np diesel</label>
 		
-	<p>
-	<input type="checkbox" id="option4" name="np-kerosene">
-		<label for="option4"><span></span>np kerosene</label>
-	
-	<p>
-	<input type="checkbox" id="option5" name="in-kerosene">
-		<label for="option5"><span></span>in kerosene</label>
+		<p>
+		<input type="checkbox" id="option3" name="in-diesel">
+			<label for="option3"><span></span>in diesel</label>
+			
+		<p>
+		<input type="checkbox" id="option4" name="np-kerosene">
+			<label for="option4"><span></span>np kerosene</label>
+		
+		<p>
+		<input type="checkbox" id="option5" name="in-kerosene">
+			<label for="option5"><span></span>in kerosene</label>
 
-	<p>
-	<input type="button" value="Show Charts" onclick="displayChart()">
-</div>
-<div>
-	<h2>Datasets</h2>
-	<b>Nepal</b>
-	<a href="csv.php?getData=np_kerosene" target="_blank">Kerosene</a>
-	<a href="csv.php?getData=np_diesel" target="_blank">Diesel</a>
-	<a href="csv.php?getData=np_petrol" target="_blank">Petrol</a>
-	<b>India</b>
-	<a href="csv.php?getData=in_kerosene" target="_blank">Kerosene</a>
-	<a href="csv.php?getData=in_diesel" target="_blank">Diesel</a>
-	<a href="csv.php?getData=in_petrol" target="_blank">Petrol</a>
-</div>
-</div>
+		<p>
+		<input type="button" value="Show Charts" onclick="displayChart()">
+	</div>
+	<div style="clear:both"></div>
+	<div id="datasets">
+		<h2 class="header">Datasets</h2>
+		<ol id="data-sets-body">
+			<li>Nepal
+				<ol>
+					<li class="link"><a href="csv.php?getData=np_kerosene" target="_blank">Kerosene</a></li>
+					<li class="link"><a href="csv.php?getData=np_diesel" target="_blank">Diesel</a></li>
+					<li class="link"><a href="csv.php?getData=np_petrol" target="_blank">Petrol</a></li>
+				</ol>
+			</li>
+			<li>India
+				<ol>
+					<li class="link"><a href="csv.php?getData=in_kerosene" target="_blank">Kerosene</a></li>
+					<li class="link"><a href="csv.php?getData=in_diesel" target="_blank">Diesel</a></li>
+					<li class="link"><a href="csv.php?getData=in_petrol" target="_blank">Petrol</a></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+	
 </body>
 </html>
 
