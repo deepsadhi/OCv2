@@ -16,15 +16,50 @@ a, a:link, a:visited{
 }
 
 /*Header Styles */
-#header{
-	height:100px;
-	background:#f5f5f5;
-	border-bottom:1px solid #cfcfcf;
+
+header{
+	background:#ecf0f1;
+	/*border-bottom:1px solid #cfcfcf;*/
 	position:fixed;
 	max-width:100%;
 	width:100%;
 	z-index:100;
 }
+
+#header{
+	height:100px;
+}
+
+/*Small Header on SCroll when top scroll position is 50px */
+	#header-small{
+		height:50px;
+		position:fixed;
+		width:100%;
+	}
+
+	#header-small #logo{
+		top:5px;
+	}
+
+	#header-small #logo img{
+		height:40px;
+	}
+
+	#header-small #title{
+		margin-top:10px;
+		font-size:15px;
+	}
+
+	#header-small #navigation{
+		line-height:49px;
+	}
+
+	#header-small li{
+		height:50px;
+	}
+
+	#header-small li > a{
+	}
 
 #logo{
 	position:relative;
@@ -63,41 +98,44 @@ a, a:link, a:visited{
 	text-transform:uppercase;
 }
 
-#header li{
+li{
 	margin:0 5px;
 	float:left;
 	transition:background .3s;
 	position:relative;
+	height:100px;
 }
 
-#header li:hover{
-	background:#ffad40;
-	background:#B5C7DC;
+header li:hover{
+	background:#3498db;
 	transition:background .3s;
 }
 
-#header li > a{
+header li > a{
 	padding:40px 10px;
 }
 
-#header li:hover a{
+header li:hover a{
 	color:#fff;
 }
 
-#header .active{
+header .active{
 	position:relative;
-	height:100px;
-	background:#B5C7DC;
+	background:#3498db;
 }
 
-#header .active:after{
+header .active a{
+	color:#fff;
+}
+
+header .active:after{
 	content:' ';
 	position:absolute;
 	width:0;
 	left:50%;
 	top:100%;
 	margin-left:-10px;
-	border-top:10px solid #B5C7DC;
+	border-top:10px solid #3498db;
 	border-left:10px solid transparent;
 	border-right:10px solid transparent;
 }
@@ -122,6 +160,7 @@ a, a:link, a:visited{
 	width:700px;
 	max-width:100%;
 	margin:0 10px 10px 0;
+	overflow:auto;
 }
 
 #controls{
@@ -137,7 +176,6 @@ a, a:link, a:visited{
 
 input[type="checkbox"] {
     display:none;
-	*display:inline-block;
 }
 
 input[type="checkbox"] + label {
@@ -173,7 +211,7 @@ input[type="button"]:active{
 
 h2.header:before{
 	position:absolute;
-	border-left:5px solid #B5C7DC;
+	border-left:5px solid #3498db;
 	margin:-10px 0 0 -20px;
 	padding:0;
 	content:' ';
@@ -181,14 +219,13 @@ h2.header:before{
 }
 
 h2.header{
-	background:#f5f5f5;
+	background:#ecf0f1;
 	font-size:18px;
 	font-weight:bold;
 	text-transform:uppercase;
 	padding:10px;
 	margin:10px 0;
 	position:relative;
-	box-shadow:1px 1px 3px #ccc;
 }
 
 #data-sets-body{
