@@ -54,13 +54,6 @@ header{
 		line-height:49px;
 	}
 
-	#header-small li{
-		height:50px;
-	}
-
-	#header-small li > a{
-	}
-
 #logo{
 	position:relative;
 	top:20px;
@@ -98,37 +91,33 @@ header{
 	text-transform:uppercase;
 }
 
-li{
-	margin:0 5px;
-	float:left;
-	transition:background .3s;
-	position:relative;
-	height:100px;
+#mobile-device{
+	display:none;
 }
 
-header li:hover{
+#navigation > #menu{
+	display:none;
+}
+
+#navigation a{
+	display:inline-block;
+	height:100%;
+	padding:0 10px;
+	
+}
+
+#navigation a:hover{
 	background:#3498db;
-	transition:background .3s;
-}
-
-header li > a{
-	padding:40px 10px;
-}
-
-header li:hover a{
 	color:#fff;
 }
 
-header .active{
+#navigation a.active{
 	position:relative;
 	background:#3498db;
-}
-
-header .active a{
 	color:#fff;
 }
 
-header .active:after{
+#navigation a.active:after{
 	content:' ';
 	position:absolute;
 	width:0;
@@ -203,6 +192,7 @@ input[type="button"]{
 	margin:10px;
 	color:#333;
 	height:40px;
+	background:#ECF0F1;
 }
 
 input[type="button"]:active{
