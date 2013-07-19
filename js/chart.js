@@ -1,12 +1,12 @@
-function prepareChart(chartList){
+function chart(petroleumProduct){
 	var seriesOptions = [],
 		yAxisOptions = [],
 		seriesCounter = 0,
-		names = chartList,
+		names = petroleumProduct,
 		colors = Highcharts.getOptions().colors;
 
 	$.each(names, function(i, name) {
-		id=name.replace(': ','_');
+		id = name.replace(': ','_');
 		$.getJSON('json.php?getData='+ id.toLowerCase(), 	function(data) {
 
 			seriesOptions[i] = {
@@ -88,14 +88,35 @@ function prepareChart(chartList){
 
 }
 
-function displayChart(){
-	chartList=new Array();
-	list = new Array('NP: Petrol', 'IN: Petrol', 'NP: Diesel', 'IN: Diesel', 'NP: Kerosene', 'IN: Kerosene');
-	for (i=0; i<=5; i++){
-		if($('#option'+i).prop('checked')){
-			chartList.push(list[i]);
+function compare(petroleumProducts){
+	var petroleumProductsList = new Array('NP: Petrol', 'IN: Petrol', 'NP: Diesel', 'IN: Diesel', 'NP: Kerosene', 'IN: Kerosene');
+	
+	if(arguments.length == 0){
+		comparePetroleumProduct = new Array();
+		for (i=0; i<petroleumProductsList.length; i++){
+			if($('#option'+i).prop('checked')){
+				comparePetroleumProduct.push(petroleumProductsList[i]);
+			}
+		}
+		chart(comparePetroleumProduct);
+		
+	}else if(arguments.length == 1){
+		for(i=0;i<=petroleumProductsList.length;i++){
+			$('#option'+i).prop('checked', false);
+		}
+		
+		comparePetroleumProduct = new Array();
+		for (i=0; i<petroleumProducts.length; i++){
+			comparePetroleumProduct.push(petroleumProductsList[petroleumProducts[i]]);
+		}
+		
+		chart(comparePetroleumProduct);
+		
+		for(i=0;i<=petroleumProducts.length;i++){
+			$('#option'+petroleumProducts[i]).prop('checked', true);
 		}
 	}
-	prepareChart(chartList);
+
 }
+
 
