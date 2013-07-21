@@ -7,6 +7,7 @@ function chart(petroleumProduct){
 
 	$.each(names, function(i, name) {
 		id = name.replace(': ','_');
+		id = id.replace(' ', '');
 		$.getJSON('json.php?getData='+ id.toLowerCase(), 	function(data) {
 
 			seriesOptions[i] = {
@@ -89,7 +90,7 @@ function chart(petroleumProduct){
 }
 
 function compare(petroleumProducts){
-	var petroleumProductsList = new Array('NP: Petrol', 'IN: Petrol', 'NP: Diesel', 'IN: Diesel', 'NP: Kerosene', 'IN: Kerosene');
+	var petroleumProductsList = new Array('NP: Petrol', 'IN: Petrol', 'NP: Diesel', 'IN: Diesel', 'NP: Kerosene', 'IN: Kerosene', 'NP: LP Gas');
 	
 	if(arguments.length == 0){
 		comparePetroleumProduct = new Array();
