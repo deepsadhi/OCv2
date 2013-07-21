@@ -55,8 +55,10 @@
 					prev_class.removeClass('active');
 					$(this).addClass('active');
 					prev_class = $(this);
+					pos = 0;
 					if(get_href != '#'){
-						$('html,body').animate({scrollTop: para.position().top}, 800);
+						pos = para.position().top;
+						$('html,body').animate({scrollTop:pos}, 800);
 					}
 					else{
 						$('html,body').animate({scrollTop: 0}, 800);
@@ -94,8 +96,8 @@
 			<div id="main-nav">
 				<a href="#" class="active">Home</a>
 				<a href="#datasets">Data Sets</a>
-				<a href="#">Contributers</a>
-				<a href="#">Data Sets</a>
+				<a href="#downloads">Downloads</a>
+				<a href="#contributers">Contributers</a>
 			</div>
 		</nav>
 	</div>
@@ -141,14 +143,14 @@
 		<div id="datasets">
 			<h2 class="header">Datasets</h2>
 			<ol id="data-sets-body">
-				<li>Nepal
+				<li><h2>Nepal</h2>
 					<ol>
 						<li class="link"><a href="csv.php?getData=np_kerosene" target="_blank">Kerosene</a></li>
 						<li class="link"><a href="csv.php?getData=np_diesel" target="_blank">Diesel</a></li>
 						<li class="link"><a href="csv.php?getData=np_petrol" target="_blank">Petrol</a></li>
 					</ol>
 				</li>
-				<li>India
+				<li><h2>India</h2>
 					<ol>
 						<li class="link"><a href="csv.php?getData=in_kerosene" target="_blank">Kerosene</a></li>
 						<li class="link"><a href="csv.php?getData=in_diesel" target="_blank">Diesel</a></li>
@@ -157,6 +159,70 @@
 				</li>
 			</ol>
 		</div>	<!--Datasets Ends -->
+		
+		<div id="downloads">
+			<h2 class="header">Apps Download</h1>
+			<div class="app-logo">
+				<img src="images/android.svg" height="100"/>
+				<div class="img-cap">Android</div>
+			</div>
+			<div class="app-logo">
+				<img src="images/windows.svg" height="100"/>
+				<div class="img-cap">Windows Phone</div>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+
+		<div id="contributers">
+			<h2 class="header">Contributers</h1>
+			<div id="contributers-list">
+				<figure>
+					<a href="#">
+					<img src="images/avatars/ashmita.jpeg"/>
+					<div class="brief-info">
+						<div class="name">Ashmita Mishra</div>
+						<div class="work">Developer</div>
+					</div>
+					</a>
+				</figure>
+				<figure>
+					<a href="#">
+					<img src="images/avatars/ayush.jpeg"/>
+					<div class="brief-info">
+						<div class="name">Ayush Maharjan</div>
+						<div class="work">Developer/ Data Analyst</div>
+					</div>
+					</a>
+				</figure>
+				<figure>
+					<a href="#">
+					<img src="images/avatars/deepak.jpeg"/>
+					<div class="brief-info">
+						<div class="name">Deepak Adhikari</div>
+						<div class="work">Developer</div>
+					</div>
+					</a>
+				</figure>
+				<figure>
+					<a href="#">
+					<img src="images/avatars/kshitiz.jpeg"/>
+					<div class="brief-info">
+						<div class="name">Manisa Panta</div>
+						<div class="work">Designer</div>
+					</div>
+					</a>
+				</figure>
+				<figure>
+					<a href="#">
+					<img src="images/avatars/manisa.jpg"/>
+					<div class="brief-info">
+						<div class="name">Manisa Panta</div>
+						<div class="work">Designer</div>
+					</div>
+					</a>
+				</figure>
+			</div>
+		</div>
 	</div>	<!--Wrapper Closes for main-content -->
 </div> <!--Main content Ends -->
 </body>
