@@ -23,7 +23,9 @@ if(isset($_GET['getData'])){
 			array_push($data, array(intval($op["date"])*1000, floatval($op["price"])));
 		}
 		# add one more data of today's date, to complete the graph
-		array_push($data, array(time()*1000, floatval($op["price"])));
+		if(isset($op)){
+			array_push($data, array(time()*1000, floatval($op["price"])));
+		}
 		echo json_encode($data);
 	}else{
 		hack_attempt();
