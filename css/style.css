@@ -19,6 +19,7 @@ a, a:link, a:visited{
 
 header{
 	background:#ecf0f1;
+	background:rgba(236, 240, 241, .8);
 	/*border-bottom:1px solid #cfcfcf;*/
 	position:fixed;
 	max-width:100%;
@@ -39,6 +40,7 @@ header{
 
 	#header-small #logo{
 		top:5px;
+		display:none;
 	}
 
 	#header-small #logo img{
@@ -52,6 +54,10 @@ header{
 
 	#header-small #navigation{
 		line-height:49px;
+	}
+	
+	#header-small #tagline{
+		text-indent:0;
 	}
 
 #logo{
@@ -108,17 +114,17 @@ header{
 	color:#fff;
 }
 
-#navigation a.active:after{
-	content:' ';
-	position:absolute;
-	width:0;
-	left:50%;
-	top:100%;
-	margin-left:-10px;
-	border-top:10px solid #3498db;
-	border-left:10px solid transparent;
-	border-right:10px solid transparent;
-}
+/*#navigation a.active:after{*/
+/*	content:' ';*/
+/*	position:absolute;*/
+/*	width:0;*/
+/*	left:50%;*
+/*	top:100%;*/
+/*	margin-left:-10px;*/
+/*	border-top:10px solid #3498db;*/
+/*	border-left:10px solid transparent;*/
+/*	border-right:10px solid transparent;*/
+/*}*/
 
 #navigation > #menu{
 	display:none;

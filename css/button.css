@@ -1,0 +1,46 @@
+ .button{
+	height:50px;
+	/* border:1px solid #efefef; */
+	background:#fff;
+	margin:5px 0;
+	float:left;
+	/*border-radius:5px;*/
+	box-shadow:1px 1px 2px #efefef;
+	/* padding:px; */
+	width:14.1875em;
+	margin-left:0.5em;
+}
+
+.button .info{
+	color:#999;
+	float:left;
+	position:relative;
+	top:50%;
+	line-height:1em;
+	margin:-.5em 0 0 15px; 
+}
+
+.button img{
+	height:100%;
+	float:left;
+	/*border-radius:5px 0 0 5px;*/
+	
+}
+
+img.lpg{
+	background:#e67e22;
+}
+
+img.petrol{
+	background:#f39c12;
+}
+
+img.kerosene{
+	background:#3498db;
+}
+
+img.nepal{
+}
+
+img.india{
+}
