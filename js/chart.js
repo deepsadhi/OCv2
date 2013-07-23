@@ -102,7 +102,7 @@ function compare(petroleumProducts){
 		chart(comparePetroleumProduct);
 		
 	}else if(arguments.length == 1){
-		for(i=0;i<=petroleumProductsList.length;i++){
+		for(i=0;i<petroleumProductsList.length;i++){
 			$('#option'+i).prop('checked', false);
 		}
 		
