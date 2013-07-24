@@ -20,7 +20,6 @@ a, a:link, a:visited{
 header{
 	background:#ecf0f1;
 	background:rgba(219,237,249, .9);
-	/*border-bottom:1px solid #cfcfcf;*/
 	position:fixed;
 	max-width:100%;
 	width:100%;
@@ -140,7 +139,7 @@ header{
 	position:relative;
 	top:70px;
 	max-width:100%;
-	background:url(../images/bg.png) no-repeat fixed bottom 20px left 20px;
+	/* background:url(../images/bg.png) no-repeat fixed bottom 20px left 20px; */
 }
 
 #main-content .wrapper{
