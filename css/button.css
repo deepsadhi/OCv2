@@ -9,7 +9,7 @@
 	margin:5px 0;
 	float:left;
 	/*border-radius:5px;*/
-	box-shadow:3px 3px #ecf0f1;
+	border: 1px solid #ecf0f1;
 	/* padding:px; */
 	width:14.1875em;
 	margin-right:0.5em;
@@ -30,15 +30,15 @@ a.button{
 }
 
 .button:hover.kerosene{
-	background:#75b9e7;
+	background:#5faee3;
 }
 
 .button:hover.lpg{
-	background:#ef8b80;
+	background:#ea6153;
 }
 
 .button:hover.nepal{
-	background:#ff8080;
+	background:#ea6153;
 }
 
 .button:hover.india{
