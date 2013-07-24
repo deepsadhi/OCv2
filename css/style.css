@@ -19,7 +19,7 @@ a, a:link, a:visited{
 
 header{
 	background:#ecf0f1;
-	background:rgba(236, 240, 241, .8);
+	background:rgba(219,237,249, .9);
 	/*border-bottom:1px solid #cfcfcf;*/
 	position:fixed;
 	max-width:100%;
@@ -33,18 +33,21 @@ header{
 
 /*Small Header on SCroll when top scroll position is 50px */
 	#header-small{
-		height:50px;
+		height:65px;
 		position:fixed;
 		width:100%;
 	}
 
 	#header-small #logo{
-		top:5px;
-		display:none;
+		top:0;
 	}
 
 	#header-small #logo img{
-		height:40px;
+		background:#C0C0C0;
+		background:#3498db;
+		padding:5px;
+		height:70px;
+		opacity:1;
 	}
 
 	#header-small #title{
@@ -52,8 +55,11 @@ header{
 		font-size:20px;
 	}
 
-	#header-small #navigation{
-		line-height:49px;
+	#header-small #navigation a{
+		display:inline-block;
+		position:relative;
+		height:65px;
+		padding:25px 10px;
 	}
 	
 	#header-small #tagline{
@@ -68,7 +74,6 @@ header{
 }
 
 	#logo img{
-		height:70px;
 	}
 	
 #title{
@@ -93,8 +98,8 @@ header{
 /*Navigation Styles */
 #navigation{
 	float:right;
-	line-height:99px;
 	text-transform:uppercase;
+	height:65px;
 }
 
 #navigation a{
@@ -133,7 +138,7 @@ header{
 /*Main Body */
 #main-content{
 	position:relative;
-	top:100px;
+	top:70px;
 	max-width:100%;
 	background:url(../images/bg.png) no-repeat fixed bottom 20px left 20px;
 }
@@ -169,7 +174,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-    cursor: hand;
+	cursor: hand;
 	cursor: pointer;
 }
 

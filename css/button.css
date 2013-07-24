@@ -1,18 +1,51 @@
- .button{
+.button-body{
+	clear:both;
+}
+
+.button{
 	height:50px;
 	/* border:1px solid #efefef; */
 	background:#fff;
 	margin:5px 0;
 	float:left;
 	/*border-radius:5px;*/
-	box-shadow:1px 1px 2px #efefef;
+	box-shadow:3px 3px #ecf0f1;
 	/* padding:px; */
 	width:14.1875em;
-	margin-left:0.5em;
+	margin-right:0.5em;
+	transition:background .5s, color .5s;
+}
+
+a.button{
+	color:#999;
+}
+
+.button:hover{
+	color:#fff;
+	transition:background .5s, color .5s;
+}
+
+.button:hover.petrol{
+	background:#f5d657;
+}
+
+.button:hover.kerosene{
+	background:#75b9e7;
+}
+
+.button:hover.lpg{
+	background:#ef8b80;
+}
+
+.button:hover.nepal{
+	background:#ff2f61;
+}
+
+.button:hover.india{
+	background:#2ecc71;
 }
 
 .button .info{
-	color:#999;
 	float:left;
 	position:relative;
 	top:50%;
@@ -40,7 +73,23 @@ img.kerosene{
 }
 
 img.nepal{
+	background:#fff;
+	padding:5px;
+	width:50px;
 }
 
 img.india{
+}
+
+#downloads .button{
+	width:50px;
+	height:auto;
+	position:relative;
+}
+
+#downloads .button img{
+	width:100%;
+	padding:10px;
+	background:#a4c639;
+	display:block;
 }
