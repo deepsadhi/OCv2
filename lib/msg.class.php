@@ -10,6 +10,7 @@ class Msg
 
 	static public function write_msg($msg){
 		if(self::log_directory()){
+			$msg = str_replace('\/','/',json_encode($msg));
 			if(!(file_put_contents(self::$msg_file, $msg))){
 				die('Could not write to <em><b>SITE ROOT/logs/msg.txt</b></em>');
 			}
@@ -17,9 +18,12 @@ class Msg
 	}
 
 	static public function display_msg(){
-		return file_get_contents(self::$msg_file);
+		if(self::log_directory()){
+			return file_get_contents(self::$msg_file);
+		}
 	}
-	
+
+
 	private function log_directory(){
 		if(!file_exists(self::$msg_path)){
 			die('Create a <em><b>logs</b></em> directory here <em><b>SITE ROOT/</b></em>');

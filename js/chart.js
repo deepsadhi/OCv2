@@ -1,6 +1,6 @@
 function init(){
 	compare([4,5]);
-	$.getJSON('msg.php', 	function(data) {
+	$.getJSON('logs/msg.json', 	function(data) {
 		$("#msg").html(data);
 	});
 }

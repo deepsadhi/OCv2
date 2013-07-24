@@ -33,7 +33,7 @@ defined('SITE_ROOT') ? null : define('SITE_ROOT', dirname(LIB_PATH));
  */
 defined('LOG_PATH') ? null : define('LOG_PATH', SITE_ROOT.DS.'logs');
 defined('LOG_FILE') ? null : define('LOG_FILE', LOG_PATH.DS.'log.txt');
-defined('MSG_FILE') ? null : define('MSG_FILE', LOG_PATH.DS.'msg.txt');
+defined('MSG_FILE') ? null : define('MSG_FILE', LOG_PATH.DS.'msg.json');
 
 
 /**
