@@ -9,7 +9,7 @@ class Log
 
 	static public function log_action($action, $message=""){
 		if(self::log_directory()){
-			if($handle = fopen(self::$log_file, 'a')){
+			if(@$handle = fopen(self::$log_file, 'a')){
 				$timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
 				$content = "{$timestamp} | {$action}: {$message}\n";
 				fwrite($handle, $content);
@@ -49,7 +49,17 @@ class Log
 	}
 	
 	static public function check_password($password){
-		$hash = '$2a$10$dQf8BXBOmBs.RCKb7oVwqebsPxQujq0T/44lWTlbMrbiKsz4XkCHC';
+	/**
+	 * Generate password
+	 *	$password = '';
+	 *	$cost = 10;
+	 *	$salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
+	 *	$salt = sprintf("$2a$%02d$", $cost) . $salt;
+	 *	$hash = crypt($password, $salt);
+	 *	echo $hash;
+	 */
+
+		$hash = '$2a$10$eDm6d76snKxR1Oe5w41G9e0zNzNj872AovO9QSo9tqCdMFAlL0wni';
 		if(crypt($password, $hash) == $hash){
 			return true;
 		}else{

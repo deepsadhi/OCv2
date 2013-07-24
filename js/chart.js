@@ -1,3 +1,10 @@
+function init(){
+	compare([4,5]);
+	$.getJSON('msg.php', 	function(data) {
+		$("#msg").html(data);
+	});
+}
+
 function chart(petroleumProduct){
 	var seriesOptions = [],
 		yAxisOptions = [],
