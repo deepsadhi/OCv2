@@ -42,7 +42,20 @@ function chart(petroleumProduct){
 				text: 'Source: nepaloil.com.np<br>iocl.com',
 				x: -20
 			},
-
+		
+			colors: [
+				'#ff0000', 
+				'#00ff00', 
+				'#8bbc21', 
+				'#910000', 
+				'#1aadce', 
+				'#492970',
+				'#f28f43', 
+				'#77a1e5', 
+				'#c42525', 
+				'#a6c96a'
+			],
+			
 			legend: {
 				enabled: true,
 				//align: 'right',
