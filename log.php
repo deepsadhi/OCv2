@@ -13,9 +13,10 @@ if(isset($_GET['key'])){
 			$name = $purifier->purify($_GET['name']);
 			if(!empty($name)){
 				echo "Save this file and mail your team members\n";
+				echo "-----------------------------------------\n";
 				Log::display_log();
 				Log::clear();
-				Log::log_action($name, 'Cleared log');
+				Log::log_action($name, 'cleared log');
 			}else{
 				die('Name missing');
 			}

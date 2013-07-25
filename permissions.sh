@@ -11,6 +11,6 @@ sudo find . -type f -exec chown nobody {} +
 sudo find . -type f -exec chgrp $USER {} +
 sudo find . -type f -exec chmod 470 {} +
 
-#permisssion for logs directory
+#permisssion for files logs directory
 sudo chmod 670 logs/log.txt
 sudo chmod 670 logs/msg.json

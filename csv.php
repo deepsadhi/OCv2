@@ -15,6 +15,7 @@ if(isset($_GET['getData'])){
 
 	if($database->tableExists($tblName)){
 		# extract data from table
+		$data = '';
 		$sql = "SELECT date, price FROM {$tblName} ORDER BY date ASC";
 		$database->sql($sql);
 		$res = $database->getResult();
