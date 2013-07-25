@@ -12,6 +12,5 @@ sudo find . -type f -exec chgrp $USER {} +
 sudo find . -type f -exec chmod 470 {} +
 
 #permisssion for logs directory
-sudo chmod 370 logs/
 sudo chmod 670 logs/log.txt
-sudo chmod 670 logs/msg.txt
+sudo chmod 670 logs/msg.json
