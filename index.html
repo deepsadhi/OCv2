@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/media.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
-<!--		<link href="http://fonts.googleapis.com/css?family=Gudea" rel="stylesheet" type="text/css">-->
+	<!-- 	<link href="http://fonts.googleapis.com/css?family=Gudea" rel="stylesheet" type="text/css"> -->
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/modernizr.min.js"></script>
@@ -46,58 +46,20 @@
 				init();
 			});
 			
-			$(document).ready(function(){
-				var link_select = $('#navigation #main-nav a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
-				var prev_class = link_select;	//Sets the current class as previous class for the next click event
-				$(link_select).click(function(event){
-					event.preventDefault();	//Prevents the click event to trigger
-					var get_href = $(this).attr('href');	//Get the value of 'href' attribute
-					var para = $(get_href);
-					prev_class.removeClass('active');
-					$(this).addClass('active');
-					prev_class = $(this);
-					pos = 0;
-					if(get_href != '#'){
-						pos = para.position().top;
-						$('html,body').animate({scrollTop:pos}, 800);
-					}
-					else{
-						$('html,body').animate({scrollTop: 0}, 800);
-					}
-				});
-				$("#menu").click(function(){
-					$("#main-nav").toggleClass("visible");
-				});
-			});
 			
-			$(window).scroll(function () {
-				var pos = document.documentElement.scrollTop || document.body.scrollTop;
-				if(pos > 50){
-					$('#header').attr("id", "header-small");
-				}
-				else{
-					//$('#header-small').attr("id", "header")
-				}
-			});
 			
 		</script>
 	</head>
 <body>
 <header id="header-small">
+<div id="msg"></div>
 	<div class="wrapper">
 		<div id="logo"><img src="images/logo.png" alt="Oil Price Comparison"></div>
-		<div id="title">
-<!--			<hgroup>-->
-<!--				<h1>Oil Price Comparison</h1>-->
-<!--				<h2 id="tagline">Comparison of oil price of Nepal with India.</h2>-->
-<!--			</hgroup>-->
-		</div>
 		<nav id="navigation" role="navigation">
-			<div id="menu"><input type="button" value="MENU"/></div>
 			<div id="main-nav">
 				<a href="#" class="active">Home</a>
 				<a href="#downloads">Apps</a>
-				<a href="#contributers">About</a>
+				<a href="#about">About</a>
 			</div>
 		</nav>
 	</div>
@@ -105,7 +67,9 @@
 <div id="main-content">
 	<div class="wrapper">
 	<!--Highchart inside "container" div -->
-		<div id="container" style=""></div>
+		<div id="container" style="">
+			Loading...
+		</div>
 	<!--Highchart ends -->
 		<div id="controls">
 			<p>
@@ -140,6 +104,7 @@
 
 		</div>
 		<div style="clear:both;"></div>
+		<div id="click-buttons">
 			<a class="button petrol" href="javascript:compare([2,3])">
 				<img class="petrol" src="images/fuel.png"/>
 				<div class="info">Diesel</div>
@@ -164,7 +129,7 @@
 				<img class="india" src="images/india.png"/>
 				<div class="info">India</div>
 			</a>
-		
+		</div>
 		<div style="clear:both;"></div>
 		<div id="downloads">
 			<h2 class="header">Apps Download</h1>
@@ -174,14 +139,25 @@
 			<div style="clear:both;"></div>
 		</div>
 		<div style="clear:both"></div>
-
-		<div id="contributers">
+		<div id="about">
 			<h2 class="header">About</h1>
-			The app	 compares the price of petroleum products such as diesel, kerosene and petrol between Nepal and India. It also provides the inflation rate of those products in Nepal.
+			The app	 compares the price of petroleum products such as diesel, kerosene and petrol between Nepal and India.
+			<div id="contributers">
+				<div id="names">
+					<ul>
+						<li><a href="#">Ashmita</a></li> :
+						<li><a href="#">Ayush</a></li> :
+						<li><a href="#">Deepak</a></li> :
+						<li><a href="#">Kshitiz</a></li> :
+						<li><a href="#">Manisa</a></li>
+					</ul>
+				</div>
+				<div id="contact">
+					Contact Us
+				</div>
+			</div>
 		</div>
 	</div>	<!--Wrapper Closes for main-content -->
 </div> <!--Main content Ends -->
-<div id="msg"></div>
-
 </body>
 </html>

@@ -24,3 +24,12 @@
 2013-07-24 22:00:42 | deepak: wrote message
 2013-07-24 22:00:56 | deepak: wrote message
 2013-07-24 22:01:30 | deepak: wrote message
+2013-07-25 04:02:54 | ::1: Hacking attempt?
+2013-07-25 07:45:38 | Query/Error: SELECT UNIX_TIMESTAMP(date) AS date, price FROM in_kerosene ORDER BY date ASC / Table 'oil_price.in_kerosene' doesn't exist
+2013-07-25 07:45:38 | Query/Error: SELECT UNIX_TIMESTAMP(date) AS date, price FROM np_kerosene ORDER BY date ASC / Table 'oil_price.np_kerosene' doesn't exist
+2013-07-25 12:55:04 | kshitiz: wrote message
+2013-07-25 13:15:20 | ::1: Hacking attempt?
+2013-07-25 13:17:23 | ::1: Hacking attempt?
+2013-07-25 13:17:26 | ::1: Hacking attempt?
+2013-07-25 13:17:28 | ::1: Hacking attempt?
+2013-07-25 13:17:42 | ::1: Hacking attempt?

@@ -4,6 +4,13 @@ body{
 	color:#333;
 }
 
+@font-face {
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gudea'), url(../fonts/gudea.woff) format('woff');
+}
+
 a, a:link, a:visited{
 	color:#333;
 	text-decoration:none;
@@ -58,6 +65,11 @@ header{
 		position:relative;
 		height:65px;
 		padding:25px 10px;
+		transition:background .5s, color .5s;
+	}
+	
+	#header-small #navigation a:hover{
+		transition:background .5s;
 	}
 	
 	#header-small #tagline{
@@ -150,10 +162,11 @@ header{
 	background:#fff;
 	border:1px solid #cfcfcf;
 	float:left;
-	width:700px;
+	width:710px;
 	max-width:100%;
 	margin:0 10px 10px 0;
 	overflow:auto;
+	min-height:400px;
 }
 
 #controls{
@@ -163,7 +176,7 @@ header{
 	float:left;
 	padding:10px;
 	position:relative;
-	margin:0 10px 10px 0;
+	margin:0 0 10px 0;
 	border:1px solid #cfcfcf;
 }
 
@@ -182,7 +195,6 @@ input[type="checkbox"] + label span {
     height:16px;
 	margin:7px 10px;
     vertical-align:middle;
-    background:url(../images/unchecked.png)no-repeat;
 }
 
 input[type="checkbox"]:checked + label span {
@@ -203,23 +215,22 @@ input[type="button"]:active{
 	border-bottom:2px solid #ccc;
 }
 
-h2.header:before{
+/* h2.header:before{
 	position:absolute;
 	border-left:5px solid #3498db;
 	margin:-10px 0 0 -20px;
 	padding:0;
 	content:' ';
 	height:100%;
-}
+} */
 
 h2.header{
-	background:#ecf0f1;
 	font-size:18px;
-	font-weight:bold;
 	text-transform:uppercase;
-	padding:10px;
-	margin:10px 0;
+	margin:20px 0 10px;
 	position:relative;
+	padding:10px 10px 5px;
+	border-bottom:1px solid #e0e0e0;
 }
 
 #datasets{
@@ -263,57 +274,28 @@ h2.header{
 	width:100px;
 }
 
+#about{
+	margin:0 0 20px 0;
+	overflow:hidden;
+}
+
 #contributers{
-	margin: 0 0 20px;
-}
-
-#contributers #contributers-list{
 	overflow:hidden;
+	margin:10px 0;
 }
 
-#contributers figure{
-	overflow:hidden;
+#contributers #names{
 	float:left;
-	width:33.33%;
-	margin:5px 0;
-	border:1px solid transparent;
-	display:inine-block;
+	width:80%;
+	text-shadow:1px 1px #fff;
 }
 
-#contributers figure:hover{
-	border:1px solid #ccc;
-	background:#fff;
-	border-radius:5px;
-	position:relative;
+#names li{
+	display:inline;
 }
 
-#contributers img{
-	width:100px;
-	border-radius:50px;
-	padding:3px;
-	background:#fff;
-	border:1px solid #ccc;
-	margin:5px;
+#contributers #contact{
 	float:left;
-}
-
-#contributers-list a{
-	height:100%;
-	display:inline-block;
-}
-
-#contributers .brief-info{
-	display:inline-block;
-	margin:30px 10px;
-}
-
-#contributers .brief-info .name{
-	display:block;
-	font-weight:bold;
-}
-
-#contributers .brief-info .work{
-	font-style:italic;
-	display:block;
-	font-size:14px;
+	width:20%;
+	text-align:right;
 }

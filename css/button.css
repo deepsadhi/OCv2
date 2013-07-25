@@ -1,5 +1,9 @@
-.button-body{
-	clear:both;
+#click-buttons{
+	overflow:hidden;
+}
+
+.button:nth-child(4){
+	margin-right:0;
 }
 
 .button{
@@ -11,8 +15,8 @@
 	/*border-radius:5px;*/
 	border: 1px solid #ecf0f1;
 	/* padding:px; */
-	width:14.1875em;
-	margin-right:0.5em;
+	width:14.313em;
+	margin-right:.5em;
 	transition:background .5s, color .5s;
 }
 
@@ -75,8 +79,6 @@ img.kerosene{
 
 img.nepal{
 	background:#ff3333;
-	padding:5px;
-	width:50px;
 }
 
 img.india{

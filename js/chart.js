@@ -1,9 +1,32 @@
 function init(){
+	header();
 	compare([4,5]);
 	$.getJSON('logs/msg.json', 	function(data) {
 		$("#msg").html(data);
 	});
 }
+
+function header(){
+	var link_select = $('#navigation #main-nav a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
+	var prev_class = link_select;	//Sets the current class as previous class for the next click event
+	$(link_select).click(function(event){
+		event.preventDefault();	//Prevents the click event to trigger
+		var get_href = $(this).attr('href');	//Get the value of 'href' attribute
+		var para = $(get_href);
+		prev_class.removeClass('active');
+		$(this).addClass('active');
+		prev_class = $(this);
+		pos = 0;
+		if(get_href != '#'){
+			pos = para.position().top;
+			$('html,body').animate({scrollTop:pos}, 800);
+		}
+		else{
+			$('html,body').animate({scrollTop: 0}, 800);
+		}
+	});
+}
+
 
 function chart(petroleumProduct){
 	var seriesOptions = [],
@@ -51,16 +74,13 @@ function chart(petroleumProduct){
 			},
 		
 			colors: [
-				'#ff0000', 
-				'#00ff00', 
-				'#8bbc21', 
-				'#910000', 
-				'#1aadce', 
-				'#492970',
-				'#f28f43', 
-				'#77a1e5', 
-				'#c42525', 
-				'#a6c96a'
+				'#1abc9c',
+				'#f1c40f',
+				'#d35400',
+				'#8e44ad',
+				'#2c3e50',
+				'#34495e',
+				'#E8601C'
 			],
 			
 			legend: {
