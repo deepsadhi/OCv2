@@ -30,10 +30,10 @@ Read/Write permissions:
 DATA SOURCE:
 ------------
 
-Petroleum product prices in Nepal
+Petroleum product prices in Nepal  
 [http://www.nepaloil.com.np/main/?opt1=sellingprice&opt2=previoussellingprice](http://www.nepaloil.com.np/main/?opt1=sellingprice&opt2=previoussellingprice)
 
-Petroleum product prices in India
+Petroleum product prices in India  
 [http://iocl.com/](http://iocl.com/)
 
 
