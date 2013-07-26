@@ -42,7 +42,7 @@ CONTRIBUTORS:
 * [Ayush](http://about.me/ayushmaharjan)
 * [Ashmita](http://about.me/mishraashmita)
 * [Deepak](http://about.me/deepsadhi)
-* [Kshitiz]()
+* [Kshitiz](http://about.me/kshitiztiwari)
 * [Mansia]()
 
 
