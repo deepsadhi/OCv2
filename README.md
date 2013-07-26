@@ -31,10 +31,9 @@ DATA SETS:
 ----------
 
 * csv.php?getData=np_lpgas
-* csv.php?getData=in_diesel
+* csv.php?getData=np_diesel
 * csv.php?getData=in_diesel
 * csv.php?getData=np_petrol
-* csv.php?getData=in_petrol
 * csv.php?getData=in_petrol
 * csv.php?getData=np_kerosene
 * csv.php?getData=in_kerosene
