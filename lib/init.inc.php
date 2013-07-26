@@ -5,7 +5,6 @@
  * Loads necessary php files to initialize presentation2.0 (SITE) app
  */
 
-error_reporting(E_ALL);
 
 
 /**

@@ -2,3 +2,33 @@
 2013-07-25 16:44:29 | deepak: wrote message
 2013-07-25 16:44:33 | deepak: wrote message
 2013-07-25 16:57:08 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:16 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:16 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_kerosene" / 
+2013-07-25 18:31:16 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:16 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:16 | Query/Error: SHOW TABLES FROM oil_price LIKE "in_kerosene" / 
+2013-07-25 18:31:16 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:20 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:20 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_kerosene" / 
+2013-07-25 18:31:20 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:20 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:20 | Query/Error: SHOW TABLES FROM oil_price LIKE "in_kerosene" / 
+2013-07-25 18:31:20 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:35 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:35 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_petrol" / 
+2013-07-25 18:31:35 | 127.0.0.1: Hacking attempt?
+2013-07-25 18:31:38 | Database: Could not connect to database => Access denied for user 'root'@'localhost' (using password: NO)
+2013-07-25 18:31:38 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_petrol" / 
+2013-07-25 18:31:38 | 127.0.0.1: Hacking attempt?
+2013-07-26 02:37:33 | Database: Could not connect to database => Access denied for user 'admin'@'localhost' (using password: NO)
+2013-07-26 02:37:33 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_kerosene" / 
+2013-07-26 02:37:33 | 127.0.0.1: Hacking attempt?
+2013-07-26 02:37:33 | Database: Could not connect to database => Access denied for user 'admin'@'localhost' (using password: NO)
+2013-07-26 02:37:33 | Query/Error: SHOW TABLES FROM oil_price LIKE "in_kerosene" / 
+2013-07-26 02:37:33 | 127.0.0.1: Hacking attempt?
+2013-07-26 02:38:02 | Database: Could not connect to database => Access denied for user 'admin'@'localhost' (using password: NO)
+2013-07-26 02:38:02 | Query/Error: SHOW TABLES FROM oil_price LIKE "np_petrol" / 
+2013-07-26 02:38:02 | 127.0.0.1: Hacking attempt?
+2013-07-26 02:39:39 | Database: Could not connect to database => Access denied for user 'admin'@'localhost' (using password: NO)
+2013-07-26 02:39:51 | Query/Error: SELECT UNIX_TIMESTAMP(date) AS date, price FROM np_petrol2 ORDER BY date ASC / Table 'oil_price.np_petrol2' doesn't exist
+2013-07-26 02:41:30 | Query/Error: SELECT UNIX_TIMESTAMP(date) AS date, price FROM np_petrol2 ORDER BY date ASC / Table 'oil_price.np_petrol2' doesn't exist

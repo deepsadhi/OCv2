@@ -24,5 +24,6 @@ function hack_attempt(){
 
 function error_encountered($action, $msg){
 	Log::log_action($action, $msg);
+	die('Error! encountered');
 #	die("<b>Error:</b><br/>{$action}<br/>{$msg}");
 }
