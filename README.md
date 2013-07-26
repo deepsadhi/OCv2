@@ -11,7 +11,7 @@ VERSION:
 
 CHANGES:
 --------
-* LG Gas graph added
+* LP Gas graph added
 * CSV generator added
 * jqplot replaced by higcharts
 * Inflation rate comparison removed
