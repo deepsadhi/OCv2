@@ -6,8 +6,32 @@ function init(){
 	});
 }
 
+function spin(){
+	var opts = {
+		lines: 9, // The number of lines to draw
+		length: 0, // The length of each line
+		width: 16, // The line thickness
+		radius: 31, // The radius of the inner circle
+		corners: 1, // Corner roundness (0..1)
+		rotate: 11, // The rotation offset
+		direction: 1, // 1: clockwise, -1: counterclockwise
+		color: '#3498DB', // #rgb or #rrggbb
+		speed: 1, // Rounds per second
+		trail: 61, // Afterglow percentage
+		shadow: false, // Whether to render a shadow
+		hwaccel: false, // Whether to use hardware acceleration
+		className: 'spinner', // The CSS class to assign to the spinner
+		zIndex: 2e9, // The z-index (defaults to 2000000000)
+		top: 'auto', // Top position relative to parent in px
+		left: 'auto' // Left position relative to parent in px
+	};
+		
+	var target = document.getElementById('loader');
+	var spinner = new Spinner(opts).spin(target);
+}
+
 function header(){
-	var link_select = $('#navigation #main-nav a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
+	var link_select = $('#navigation a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
 	var prev_class = link_select;	//Sets the current class as previous class for the next click event
 	$(link_select).click(function(event){
 		event.preventDefault();	//Prevents the click event to trigger
@@ -89,7 +113,7 @@ function chart(petroleumProduct){
 				//layout: 'horizontal',
 				verticalAlign: 'bottom',
 				//y: 100,
-				borderWidth: 0,
+				borderWidth: 0
 			},
 			
 			rangeSelector: {

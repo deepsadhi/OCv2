@@ -8,10 +8,11 @@
 	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/media.css"/>
 		<link rel="stylesheet" type="text/css" href="css/button.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media.css"/>
 	<!-- 	<link href="http://fonts.googleapis.com/css?family=Gudea" rel="stylesheet" type="text/css"> -->
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/modernizr.min.js"></script>
 		<style type="text/css">
@@ -45,22 +46,17 @@
 			$(document).ready(function(){
 				init();
 			});
-			
-			
-			
 		</script>
 	</head>
-<body>
-<header id="header-small">
+<body onload="spin()">
+<header id="header">
 <div id="msg"></div>
 	<div class="wrapper">
 		<div id="logo"><img src="images/logo.png" alt="Oil Price Comparison"></div>
 		<nav id="navigation" role="navigation">
-			<div id="main-nav">
-				<a href="#" class="active">Home</a>
+				<a href="#" class="active"><span>Home<span></a>
 				<a href="#downloads">Apps</a>
 				<a href="#about">About</a>
-			</div>
 		</nav>
 	</div>
 </header>
@@ -68,7 +64,18 @@
 	<div class="wrapper">
 	<!--Highchart inside "container" div -->
 		<div id="container" style="">
-			Loading...
+			<div id="loading">
+				<div id="loader"></div>
+				<div id="message">
+					<span class="bold">If it's taking too much time to load. These might be reasons</span>
+					<ul>
+						<li>Could not fetch data</li>
+						<li>Brower compatibility</li>
+					</ul>
+					<span class="reload">Please try reloading the page.</span>
+				</div>
+				
+			</div>
 		</div>
 	<!--Highchart ends -->
 		<div id="controls">
@@ -133,10 +140,12 @@
 		<div style="clear:both;"></div>
 		<div id="downloads">
 			<h2 class="header">Apps Download</h1>
-			<a class="button android" href="#">
-				<img src="images/android.png"/>
-			</a>
-			<div style="clear:both;"></div>
+			<a href="#" target="_blank"><img class="android" src="images/android.png"/></a>
+			<a href="#" target="_blank"><img class="ios" src="images/ios.png"/></a>
+			<a href="#" target="_blank"><img class="windows" src="images/windows.png"/></a>
+			<a href="#" target="_blank"><img class="symbian" src="images/symbian.png"/></a>
+			<a href="#" target="_blank"><img class="blackberry" src="images/blackberry.png"/></a>
+			<div style="clear:both;"></div> 	
 		</div>
 		<div style="clear:both"></div>
 		<div id="about">
@@ -145,15 +154,15 @@
 			<div id="contributers">
 				<div id="names">
 					<ul>
-						<li><a href="#">Ashmita</a></li> :
-						<li><a href="#">Ayush</a></li> :
-						<li><a href="#">Deepak</a></li> :
-						<li><a href="#">Kshitiz</a></li> :
-						<li><a href="#">Manisa</a></li>
+						<li><a target="_blank" href="http://about.me/mishraashmita" >Ashmita</a></li>
+						<li><a target="_blank" href="http://about.me/ayushmaharjan">Ayush</a></li>
+						<li><a target="_blank" href="http://about.me/deepsadhi">Deepak</a></li>
+						<li><a target="_blank" href="http://about.me/kshitiztiwari">Kshitiz</a></li>
+						<li><a target="_blank" href="http://about.me/manisapanta">Manisa</a></li>
 					</ul>
 				</div>
-				<div id="contact">
-					Contact Us
+				<div id="contact-us">
+					<a href="https://docs.google.com/forms/d/1bb0juZ34QkSG7zBhnDjhMqDLh3GTNHWObJE8dbypqLw/viewform" target="_blank">Contact Us</a>
 				</div>
 			</div>
 		</div>
