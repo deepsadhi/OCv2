@@ -11,9 +11,7 @@ class Msg
 	static public function write_msg($msg){
 		if(self::check_file_status()){
 			$msg = str_replace('\/','/',json_encode($msg));
-			if(!(file_put_contents(self::$msg_file, $msg))){
-				die('Could not write to <em><b>SITE ROOT/logs/msg.json</b></em>');
-			}
+			file_put_contents(self::$msg_file, $msg);
 		}else{
 			die('Could not open <em><b>SITE ROOT/logs/msg.json</b></em> file for writing');
 		}
@@ -25,7 +23,7 @@ class Msg
 		}
 	}
 
-	private function check_file_status(){
+	static private function check_file_status(){
 		if(!file_exists(self::$msg_file)){
 			die('Create a <em><b>msg.json</b></em> file here <em><b>SITE ROOT/logs/</b></em>');
 			return false;

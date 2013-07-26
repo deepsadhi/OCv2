@@ -94,7 +94,7 @@ class Database
 		$query = 'SHOW TABLES FROM '.$this->db_name.' LIKE "'.$table.'"';
 		$tablesInDB = $this->query($query);
 		if($tablesInDB){
-			if($tablesInDB){
+			if(mysqli_num_rows($tablesInDB)==1){
 				return true;
 			}else{
 				return false;
@@ -160,6 +160,80 @@ class Database
 			}
 		}
 	}
+
+	public function insert($table, $params=array()){
+		$table = $this->escape_value($table);
+		$params = $this->sanitized_params($params);
+		if($this->tableExists($table)){
+			$sql = 'INSERT INTO '.$table.' ('.implode(',', array_keys($params)).') VALUES ("'.implode('", "', $params).'")';
+			if($insert = $this->query($sql)){
+				$this->result = mysqli_insert_id($this->dbLink);
+				$this->insertId = mysqli_insert_id($this->dbLink);
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+
+	public function getInsertId(){
+		$value = $this->insertId;
+		$this->insertId = null;
+		return $value;
+	}
+
+	public function update($table, $params=array(), $where){
+		$table = $this->escape_value($table);
+		$where = $this->escape_value($where);
+		$params = $this->sanitized_params($params);
+		if($this->tableExists($table)){
+			$args = array();
+			foreach($params as $field => $value){
+				$args[] = $field.'="'.$value.'"';
+			}
+			$sql = 'UPDATE '.$table.' SET '.implode(',', $args).' WHERE '.$where;
+			if($query = $this->query($sql)){
+				$this->result = mysqli_affected_rows($this->dbLink);
+				$this->affectedRows = mysqli_affected_rows($this->dbLink);
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+
+	public function getAffectedRows(){
+		$value = $this->affectedRows;
+		$this->affectedRows = null;
+		return $value;
+	}
+
+	public function delete($table, $where=null, $order='date'){
+		$table = $this->escape_value($table);
+		$where = $this->escape_value($where);
+		if($this->tableExists($table)){
+			if($where == null){
+				$delete = 'DELETE FROM '.$table;
+			}else if($where == 'last row'){
+				$delete = 'DELETE FROM '.$table.' ORDER BY '.$order.' DESC LIMIT 1';
+			}else{
+				$delete = 'DELETE FROM '.$table.' WHERE '.$where.' LIMIT 1';
+			}
+			if($del = $this->query($delete)){
+				$this->result = mysqli_affected_rows($this->dbLink);
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+
 
 	function __destruct(){
 		$this->disconnect();

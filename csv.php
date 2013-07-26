@@ -19,7 +19,6 @@ if(isset($_GET['getData'])){
 		$sql = "SELECT date, price FROM {$tblName} ORDER BY date ASC";
 		$database->sql($sql);
 		$res = $database->getResult();
-		$res = $database->getResult();
 		list($tmp, $date, $tmp, $price) = $database->getResultKeys();
 		$data = '"'.$date.'"';
 		$data .= ',"'.$tblName.'_'.$price."\"\n";

@@ -22,7 +22,7 @@ class Log
 		}
 	}
 	
-	private function check_file_status(){
+	static private function check_file_status(){
 		if(!file_exists(self::$log_file)){
 			die('Create a log.txt file here SITE ROOT/logs/');
 			return false;
@@ -40,9 +40,7 @@ class Log
 	
 	static public function clear(){
 		if(self::check_file_status()){
-			if(!(file_put_contents(self::$log_file, ''))){
-				die('Could not write to SITE ROOT/logs/log.txt');
-			}
+			file_put_contents(self::$log_file, '');
 		}else{
 			die('Could not open SITE ROOT/logs/log.txt file for writing');
 		}

@@ -1,7 +1,7 @@
 OIL PRICE COMPARISON
 ====================
 
-The app compares the price of petroleum products such as diesel, kerosene and petrol between Nepal and India.
+Oil Price Comparision is an app designed to compare the prices of petroleum products (Petrol, Diesel, Kerosene and LPG gas) between Nepal and India (Delhi).
 
 
 VERSION:
@@ -27,6 +27,19 @@ Read/Write permissions:
 * SITE ROOT/logs/msg.json
 
 
+DATA SETS:
+----------
+
+* csv.php?getData=np_lpgas
+* csv.php?getData=in_diesel
+* csv.php?getData=in_diesel
+* csv.php?getData=np_petrol
+* csv.php?getData=in_petrol
+* csv.php?getData=in_petrol
+* csv.php?getData=np_kerosene
+* csv.php?getData=in_kerosene
+
+
 DATA SOURCE:
 ------------
 
@@ -43,7 +56,7 @@ CONTRIBUTORS:
 * [Ayush](http://about.me/ayushmaharjan)
 * [Deepak](http://about.me/deepsadhi)
 * [Kshitiz](http://about.me/kshitiztiwari)
-* [Mansia]()
+* [Mansia](http://about.me/manisapanta)
 
 
 CONTACT US:

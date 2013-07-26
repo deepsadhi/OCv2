@@ -14,7 +14,9 @@ if(isset($_GET['key'])){
 					$msg = $purifier->purify($_POST['msg']);
 					Msg::write_msg($msg);
 					Log::log_action($name, 'wrote message');
+					redirect_to("throwmsg.php?key={$key}&name={$name}");
 				}
+				echo Msg::display_msg();
 			}else{
 				die('Name missing');
 			}
@@ -28,7 +30,7 @@ if(isset($_GET['key'])){
 	hack_attempt();
 }
 
-echo Msg::display_msg();
+
 
 ?>
 <hr/>

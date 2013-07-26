@@ -18,7 +18,7 @@ function redirect_to($location = null){
 
 function hack_attempt(){
 	$ip = $_SERVER['REMOTE_ADDR'];
-	error_encountered($ip, 'Hacking attempt?');
+	Log::log_action($ip, 'Hacking attempt?');
 	die('Hacking attempt?');
 }
 
