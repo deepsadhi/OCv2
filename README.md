@@ -39,8 +39,8 @@ Petroleum product prices in India
 
 CONTRIBUTORS:
 -------------
-* [Ayush](http://about.me/ayushmaharjan)
 * [Ashmita](http://about.me/mishraashmita)
+* [Ayush](http://about.me/ayushmaharjan)
 * [Deepak](http://about.me/deepsadhi)
 * [Kshitiz](http://about.me/kshitiztiwari)
 * [Mansia]()
