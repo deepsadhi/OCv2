@@ -2,7 +2,21 @@ function init(){
 	header();
 	compare([4,5]);
 	$.getJSON('logs/msg.json', 	function(data) {
-		$("#msg").html(data);
+		if (data != ""){
+			data = "<div id=\"msg-body\">" + data + "</div>";
+			$("#msg").html(data);
+			$("#msg").addClass("msg-style");
+			$("#header").css({
+				top : $("#msg").height()
+			});
+			
+			$("#main-content").css({
+				top : ($("#main-content").position().top) +  ($("#msg").height())
+			});			
+		}
+		else{
+			$("#msg").html("");
+		}
 	});
 }
 
