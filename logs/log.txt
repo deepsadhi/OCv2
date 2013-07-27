@@ -1,1 +1,3 @@
 2013-07-27 19:39:39 | deepak: cleared log
+2013-07-27 20:15:24 | deepak: wrote message
+2013-07-27 20:16:40 | deepak: wrote message
