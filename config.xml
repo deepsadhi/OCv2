@@ -56,8 +56,8 @@
     <icon src="res/icon/blackberry/icon80.png"     gap:platform="blackberry" />
     <icon src="res/icon/blackberry/icon80.png"     gap:platform="blackberry" gap:state="hover"/>
 
-    <icon src="icons/winphone/icon48.png" gap:platform="winphone" />
-    <icon src="icons/winphone/icon173tile.png" gap:platform="winphone" gap:role="background" />
+    <icon src="icons/windowsphone/icon48.png" gap:platform="winphone" />
+    <icon src="icons/windowsphone/icon173tile.png" gap:platform="winphone" gap:role="background" />
     
 
 
