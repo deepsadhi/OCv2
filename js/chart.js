@@ -79,9 +79,9 @@ function chart(petroleumProduct){
 		.fail(function(jqXHR, textStatus) {
 			var online = navigator.onLine;
 			if(online){
-				$('#message').html(textStatus+'! Could not fetch data :(<br/><span class="reload">Try again later</span>');
+				$('#message').html('<span class="bold">'+textStatus+'! Packet lost</span><span class="reload">Try reloading the app or check again later</span>');
 			}else{
-				$('#message').html('Ineternet connection lost!<span class="reload">Check your internet settings</span>');
+				$('#message').html('<span class="bold">No net acess :(</span><span class="reload">Check your internet settings</span>');
 			}
 		});
 	});

@@ -143,10 +143,15 @@ header{
 
 .bold{
 	font-size:18px;
+	display: block;
+	font-size: 23px;
 }
 
 .reload{
 	color:#CCE5F6;
+	display: block;
+	font-size: 20px;
+	margin-top: 8px;
 }
 
 #loading #message ul{
