@@ -179,6 +179,16 @@ header{
 	margin:0 auto;
 	padding:10px;
 	width:960px;
+	max-width:100%;
+}
+
+#msg-body a{
+	color:#BDC3C7;
+	padding:0 3px;
+}
+
+#msg-body a:hover{
+	text-decoration:underline;
 }
 
 #controls{
