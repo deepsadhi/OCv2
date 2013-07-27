@@ -7,6 +7,7 @@ function init(){
 }
 
 function spin(){
+	document.getElementById('container').innerHTML = '<div id=loading><div id="loader"></div><div id="message"></div></div>';
 	var opts = {
 		lines: 9, // The number of lines to draw
 		length: 0, // The length of each line
@@ -25,10 +26,10 @@ function spin(){
 		top: 'auto', // Top position relative to parent in px
 		left: 'auto' // Left position relative to parent in px
 	};
-		
 	var target = document.getElementById('loader');
 	var spinner = new Spinner(opts).spin(target);
 }
+
 
 function header(){
 	var link_select = $('#navigation a[href^="#"]');	//Selects all 'href' attributes with the initial string '#'
@@ -62,19 +63,25 @@ function chart(petroleumProduct){
 	$.each(names, function(i, name) {
 		id = name.replace(': ','_');
 		id = id.replace(' ', '');
-		$.getJSON('json.php?getData='+ id.toLowerCase(), 	function(data) {
-
+		$.getJSON('json.php?getData='+ id.toLowerCase())
+		.done(function(data) {
 			seriesOptions[i] = {
 				name: name,
 				data: data
 			};
-
 			// As we're loading the data asynchronously, we don't know what order it will arrive. So
 			// we keep a counter and create the chart when all the data is loaded.
 			seriesCounter++;
-
 			if (seriesCounter == names.length) {
 				createChart();
+			}
+		})
+		.fail(function(jqXHR, textStatus) {
+			var online = navigator.onLine;
+			if(online){
+				$('#message').html(textStatus+'! Could not fetch data :(<br/><span class="reload">Try again later</span>');
+			}else{
+				$('#message').html('Ineternet connection lost!<span class="reload">Check your internet settings</span>');
 			}
 		});
 	});
@@ -154,6 +161,7 @@ function chart(petroleumProduct){
 }
 
 function compare(petroleumProducts){
+	spin();
 	var petroleumProductsList = new Array('NP: Petrol', 'IN: Petrol', 'NP: Diesel', 'IN: Diesel', 'NP: Kerosene', 'IN: Kerosene', 'NP: LP Gas');
 	
 	if(arguments.length == 0){
@@ -183,5 +191,3 @@ function compare(petroleumProducts){
 	}
 
 }
-
-
