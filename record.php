@@ -30,7 +30,7 @@ if(isset($_GET['key'])){
 						}
 					}
 					Log::log_action($name, 'added record');
-					redirect_to("pricentry.php?key={$key}&name={$name}&entry=1");
+					redirect_to("record.php?key={$key}&name={$name}&entry=1");
 				}
 				if(isset($_GET['del'])){
 					$del = $purifier->purify($_GET['del']);
@@ -41,7 +41,7 @@ if(isset($_GET['key'])){
 							}
 						}
 						Log::log_action($name, 'deleted record');
-						redirect_to("pricentry.php?key={$key}&name={$name}&del=0");
+						redirect_to("record.php?key={$key}&name={$name}&del=0");
 					}else if($del == 0){
 						echo "Record deleted sucessfully";
 					}
