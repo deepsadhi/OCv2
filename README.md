@@ -30,6 +30,7 @@ Read/Write permissions:
 DATA SETS:
 ----------
 
+Generate dataset(.csv) here
 * csv.php?getData=np_lpgas
 * csv.php?getData=np_diesel
 * csv.php?getData=in_diesel
@@ -55,7 +56,7 @@ CONTRIBUTORS:
 * [Ayush](http://about.me/ayushmaharjan)
 * [Deepak](http://about.me/deepsadhi)
 * [Kshitiz](http://about.me/kshitiztiwari)
-* [Mansia](http://about.me/manisapanta)
+* [Manisha](http://about.me/manisapanta)
 
 
 CONTACT US:
