@@ -22,7 +22,7 @@ function init(){
 
 /*Spinner Animation */
 function spin(){
-	document.getElementById('container').innerHTML = '<div id=loading><div id="loader"></div><div id="message"></div></div>';
+	document.getElementById('container').innerHTML = '<div id="loading"><div id="loader"></div><div id="message"></div></div>';
 	var opts = {
 		lines: 9, // The number of lines to draw
 		length: 0, // The length of each line
@@ -92,12 +92,7 @@ function chart(petroleumProduct){
 			}
 		})
 		.fail(function(jqXHR, textStatus) {
-			var online = navigator.onLine;
-			if(online){
-				$('#message').html('<span class="bold">'+textStatus+'! Packet lost</span><span class="reload">Try reloading the app or check again later</span>');
-			}else{
-				$('#message').html('<span class="bold">No net acess :(</span><span class="reload">Check your internet settings</span>');
-			}
+			$('#message').html('<span class="bold">'+textStatus+'! Unable to load chart</span><span class="reload">Internet connection lost OR Internal error</span>');
 		});
 	});
 
