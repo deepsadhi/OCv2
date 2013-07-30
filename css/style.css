@@ -126,6 +126,7 @@ header{
 	height:65px;
 	position:fixed;
 	width:100%;
+	z-index:600;
 }
 
 #header #logo{
@@ -199,6 +200,8 @@ header{
 /*Styles for loading*/
 #loading{
 	width:100%;
+	position:relative;
+	z-index:400;
 }
 
 #loading #title{
@@ -224,6 +227,10 @@ header{
 	#loader{
 		height:250px;
 		margin:0;
+	}
+	
+	#loader .spinner{
+		margin:0 auto;
 	}
 
 	#msg{
@@ -546,6 +553,10 @@ img.blackberry{
 	#container{
 		width:100%;
 		float:none;
+	}
+	
+	#loading #loader{
+		width:100%;
 	}
 	
 	#controls{
