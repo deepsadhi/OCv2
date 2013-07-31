@@ -1,3 +1,6 @@
 2013-07-27 19:39:39 | deepak: cleared log
 2013-07-27 20:15:24 | deepak: wrote message
 2013-07-27 20:16:40 | deepak: wrote message
+2013-07-29 07:11:56 | 127.0.0.1: Hacking attempt?
+2013-07-29 07:12:35 | kshitiz: deleted record
+2013-07-29 07:12:43 | kshitiz: deleted record
