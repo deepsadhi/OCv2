@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 31, 2013 at 04:30 AM
+-- Generation Time: Aug 02, 2013 at 01:11 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -38,6 +38,8 @@ CREATE TABLE IF NOT EXISTS `in_diesel` (
 --
 
 INSERT INTO `in_diesel` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 75.44),
+(2, '2012-09-02', 66.112),
 (3, '2012-06-19', 66.064),
 (4, '2012-03-26', 65.456),
 (5, '2012-02-24', 65.456),
@@ -104,6 +106,8 @@ CREATE TABLE IF NOT EXISTS `in_kerosene` (
 --
 
 INSERT INTO `in_kerosene` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 23.728),
+(2, '2012-09-02', 23.728),
 (3, '2012-06-19', 23.728),
 (4, '2012-03-26', 23.728),
 (5, '2012-02-24', 23.728),
@@ -183,6 +187,8 @@ CREATE TABLE IF NOT EXISTS `in_petrol` (
 --
 
 INSERT INTO `in_petrol` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 107.584),
+(2, '2012-09-02', 109.536),
 (3, '2012-06-19', 108.448),
 (4, '2012-03-26', 105.024),
 (5, '2012-02-24', 105.024),
@@ -249,6 +255,8 @@ CREATE TABLE IF NOT EXISTS `np_diesel` (
 --
 
 INSERT INTO `np_diesel` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 99),
+(2, '2012-09-02', 97),
 (3, '2012-06-19', 93),
 (4, '2012-03-26', 89),
 (5, '2012-02-24', 85),
@@ -334,6 +342,8 @@ CREATE TABLE IF NOT EXISTS `np_kerosene` (
 --
 
 INSERT INTO `np_kerosene` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 99),
+(2, '2012-09-02', 97),
 (3, '2012-06-19', 93),
 (4, '2012-03-26', 89),
 (5, '2012-02-24', 85),
@@ -419,6 +429,8 @@ CREATE TABLE IF NOT EXISTS `np_lpgas` (
 --
 
 INSERT INTO `np_lpgas` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 1470),
+(2, '2012-09-02', 1470),
 (3, '2012-06-19', 1415),
 (4, '2012-03-26', 1415),
 (5, '2012-02-24', 1415),
@@ -497,6 +509,8 @@ CREATE TABLE IF NOT EXISTS `np_petrol` (
 --
 
 INSERT INTO `np_petrol` (`id`, `date`, `price`) VALUES
+(1, '2012-12-21', 123),
+(2, '2012-09-02', 125),
 (3, '2012-06-19', 120),
 (4, '2012-03-26', 120),
 (5, '2012-02-24', 116),
