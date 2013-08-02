@@ -19,27 +19,6 @@ CHANGES:
 * Oil Price Comparison app availabe for smart phones
 
 
-FILE PERMISSIONS:
------------------
-
-Read/Write permissions:
-* SITE ROOT/logs/log.txt
-* SITE ROOT/logs/msg.json
-
-
-DATA SETS:
-----------
-
-Generate dataset(.csv) here
-* csv.php?getData=np_lpgas
-* csv.php?getData=np_diesel
-* csv.php?getData=in_diesel
-* csv.php?getData=np_petrol
-* csv.php?getData=in_petrol
-* csv.php?getData=np_kerosene
-* csv.php?getData=in_kerosene
-
-
 DATA SOURCE:
 ------------
 
