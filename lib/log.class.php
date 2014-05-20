@@ -55,18 +55,8 @@ class Log
 	}
 	
 	static public function check_password($password){
-	/**
-	 * Generate password
-	 *	$password = '';
-	 *	$cost = 10;
-	 *	$salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
-	 *	$salt = sprintf("$2a$%02d$", $cost) . $salt;
-	 *	$hash = crypt($password, $salt);
-	 *	echo $hash;
-	 */
-
-		$hash = '$2a$10$eDm6d76snKxR1Oe5w41G9e0zNzNj872AovO9QSo9tqCdMFAlL0wni';
-		if(crypt($password, $hash) == $hash){
+		$hash = 'f285975fd2ee16d3e812db55c0f1d985';
+		if(md5($password) == $hash){
 			return true;
 		}else{
 			return false;
