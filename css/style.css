@@ -406,7 +406,7 @@ a.button{
 #downloads img{
 	height:50px;
 	margin:0 5px;
-	border:1px solid #ccc;
+	/*border:1px solid #ccc; */
 	transition:all .5s;
 }
 
